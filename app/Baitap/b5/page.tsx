@@ -11,7 +11,7 @@ async function fetchData() {
     return "Xảy ra lỗi khi lấy dữ liệu";
   }
 }
-export default async function page() {
+export default async function Page() {
   const data = await fetchData();
   return (
     <div className="p-6">

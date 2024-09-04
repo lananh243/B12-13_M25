@@ -15,20 +15,20 @@ async function getPost() {
   return data;
 }
 
-export default async function page() {
+export default async function Page() {
   const users = await getUser();
   const posts = await getPost();
   return (
     <div className="p-6">
       server component
       {users.map((item: any) => {
-        return <li>{item.name}</li>;
+        return <li key={item.id}>{item.name}</li>;
       })}
       <h1 className="font-bold text-3xl">Bài tập 1 :</h1>
       <h2 className="font-bold text-2xl">Danh sách Bài viết (SSR)</h2>
       {posts.slice(0, 4).map((item: any) => {
         return (
-          <div>
+          <div key={item.id}>
             <b>{item.title}</b>
             <p>{item.body}</p>
             <br />

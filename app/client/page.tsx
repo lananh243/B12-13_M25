@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [users, setUser] = useState([]);
   // Đi call api lấy dữ liệu để đi render
   useEffect(() => {
